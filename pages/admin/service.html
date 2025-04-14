@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100..900&family=Bebas+Neue&family=Inter:wght@100..900&family=Manrope:wght@200..800&family=Open+Sans:wght@300..800&family=Poppins:wght@100..900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+    <section class="container-dashboard">
+        <div class="nav-sidebar">
+            <h5>Admin Dashboard</h5>
+            <p id="calendar">Quản lí lịch</p>
+            <p id="service">Quản lí dịch vụ</p>
+            <p id="back">Trang chủ</p>
+            <p id="out-page" style="color: #F87171;">Đăng xuất</p>
+        </div>
+
+        <div class="content-service">
+            <div>
+                <h5>Quản lí dịch vụ</h5>
+                <button id="btn-new-service" onclick="showServiceForm()">Thêm dịch vụ mới</button>
+            </div>
+
+            <table class="information-service">
+                <thead>
+                    <tr>
+                        <th class="name-service">Tên dịch vụ</th>
+                        <th class="comment">Mô tả</th>
+                        <th class="picture">Hình ảnh</th>
+                        <th class="operation2">Thao tác</th>
+                    </tr>
+                </thead>
+                    <tbody id="service-table">
+                        
+                    </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <div class="form-service hidden" id="service-form">
+        <h5>Thêm dịch vụ mới</h5>
+        <div>
+            <label for="service-name">Tên dịch vụ</label>
+            <input type="text" id="service-name" placeholder="Nhập tên dịch vụ">
+        </div>
+        <div>
+            <label for="service-description">Mô tả</label>
+            <textarea id="comment1" placeholder="Nhập mô tả"></textarea>
+        </div>
+        <div>
+            <label for="service-image">URL Hình ảnh</label>
+            <input type="url" id="service-image" placeholder="Nhập URL hình ảnh">
+        </div>
+        <div class="btn-service">
+            <button onclick="hideServiceForm()">Huỷ</button>
+            <button onclick="saveService()">Lưu</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/service.js"></script>
+</body>
+
+</html>

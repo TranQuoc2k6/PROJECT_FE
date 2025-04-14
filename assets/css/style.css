@@ -1,0 +1,1080 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'inter';
+}
+
+/* === Đăng nhập === */
+.background-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login {
+    width: 448px;
+    height: 384px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+    padding: 31.5px 32px 32px 32px;
+    border-radius: 8px;
+}
+
+.login-register {
+    font-size: 24.6px;
+    line-height: 32px;
+    padding-bottom: 24.5px;
+}
+
+.input-email-password {
+    width: 384px;
+    height: 42px;
+    padding: 10px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    margin-bottom: 32px;
+}
+
+.login label {
+    color: #4B5563;
+    font-size: 15.2px;
+}
+
+.register label {
+    color: #4B5563;
+    font-size: 15.2px;
+}
+
+.btn-login {
+    background-color: #3B82F6;
+    color: #FFFFFF;
+    width: 384px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 16px;
+    font-size: 15.9px;
+}
+
+.last-line {
+    color: #4B5563;
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.last-line a {
+    color: #2563EB;
+    text-decoration: none;
+}
+
+.register {
+    width: 448px;
+    height: 572px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+    padding: 31.5px 32px 32px 32px;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 375px) {
+    .login {
+        width: 375px;
+    }
+
+    .input-email-password {
+        width: 311px;
+        height: 42px;
+    }
+
+    .btn-login {
+        width: 311px;
+        height: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==== Home Page ==== */
+/* === Thanh nav === */
+.navigation-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 88.5px;
+    background: #1F2937;
+    height: 52px;
+}
+
+.logo a {
+    font-size: 23.9px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.navigation {
+    display: flex;
+    gap: 16px
+}
+
+.navigation a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18.6px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+@media screen and (max-width: 834px) {
+    .navigation-section {
+        width: 834px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .navigation-section {
+        padding: 12px 16px;
+        width: 375px;
+    }
+}
+
+
+/* === Header === */
+header {
+    position: relative;
+    text-align: center;
+    color: #FFFFFF;
+    background: url('background.jpg');
+}
+
+.bg-img {
+    width: 100%;
+}
+
+
+/* Lớp phủ làm tối */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+}
+
+
+/* Văn bản trên ảnh */
+.text-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 576.0999755859375px;
+    height: 156px;
+}
+
+.text-center p:nth-child(1) {
+    font-weight: 700;
+    font-size: 50.1px;
+    line-height: 48px;
+    letter-spacing: 0px;
+    padding-bottom: 15.5px;
+}
+
+.text-center p:nth-child(2) {
+    font-weight: 400;
+    font-size: 29.4px;
+    line-height: 32px;
+    letter-spacing: 0px;
+    padding-bottom: 24.5px;
+}
+
+/* Nút "Bắt đầu ngay" */
+.btn-star {
+    background-color: #2563EB;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 32px;
+}
+
+.btn-star a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 19.8px;
+}
+
+
+@media screen and (max-width:834px) {
+    .bg-img {
+        width: 834px;
+    }
+
+    header::before {
+        width: 834px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .text-center {
+        width: 375px;
+        height: 236px;
+    }
+
+    .bg-img {
+        width: 375px;
+    }
+
+    header::before {
+        width: 375px;
+    }
+}
+
+/*  === Các lớp học phổ biến === */
+.content-class {
+    padding: 0 72.5px;
+}
+
+.content-class h3 {
+    font-weight: 700;
+    font-size: 35.3px;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    padding: 64px 0 48px 0;
+}
+
+.content {
+    display: flex;
+    gap: 32px;
+    justify-content: space-evenly;
+    padding: 0 16px 64px;
+}
+
+.content img {
+    width: 100%;
+}
+
+.note {
+    padding: 0 5px;
+}
+
+.note1 {
+    padding: 0 24px;
+}
+
+
+.gym-yoga-zumba {
+    width: 394.67999267578125px;
+    border-radius: 8px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.gym-yoga-zumba h4 {
+    padding: 23.5px 0 8.5px 24px;
+    font-weight: 700;
+    font-size: 23.9px;
+    line-height: 28px;
+    letter-spacing: 0px;
+}
+
+.gym-yoga-zumba p {
+    padding: 0 24px;
+    font-weight: 400;
+    font-size: 18.6px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    padding-bottom: 16px;
+    color: #4B5563;
+}
+
+.gym-yoga-zumba button {
+    width: 108.81999969482422px;
+    height: 40px;
+    border-radius: 4px;
+    margin-left: 24px;
+    margin-bottom: 24px;
+    border: none;
+    background-color: #2563EB;
+}
+
+.gym-yoga-zumba button a {
+    font-weight: 400;
+    font-size: 18.6px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 834px) {
+    .note1 {
+        padding: 24px 0;
+    }
+
+    .note {
+        padding: 30px 0;
+    }
+
+    .content-class {
+        width: 834px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 16px 64px;
+        margin: 0px;
+    }
+
+    .content-class {
+        width: 375px;
+        padding: 0;
+    }
+
+    .content img:nth-child(1) {
+        padding: 0;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .gym-yoga-zumba {
+        width: 343px;
+    }
+
+    .content-class h3 {
+        width: 343px;
+        padding-left: 16px;
+    }
+
+}
+
+/* === Footer === */
+.footer-container {
+    background-color: #1F2937;
+    padding: 48px 72.5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-child {
+    display: flex;
+    gap: 32px;
+    padding: 0 16px 32px;
+    justify-content: space-between;
+}
+
+.footer-child div {
+    width: 394.6600036621094px;
+}
+
+.footer-child div h4 {
+    font-weight: 700;
+    font-size: 23.9px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    padding-bottom: 16.5px;
+}
+
+.footer-child div p {
+    font-weight: 400;
+    font-size: 18.6px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #9CA3AF;
+}
+
+.footer-child div p a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18.6px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #9CA3AF;
+}
+
+.footer-child div:nth-child(3) p {
+    display: flex;
+    gap: 16px;
+}
+
+.copyright {
+    font-weight: 400;
+    font-size: 18.6px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #9CA3AF;
+    padding: 0 16px;
+    height: 57px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    border-top: 1px solid #374151;
+}
+
+@media screen and (max-width:834px) {
+    .footer-container {
+        padding: 48px 25.5px;
+        width: 834px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .footer-container {
+        padding: 48px 0px;
+        width: 375px;
+    }
+
+    .footer-child {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-child div {
+        width: 310px;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: -17px;
+}
+
+.input-email-password.error {
+    border: 2px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  === BOOKING === */
+
+/* === nav === */
+.container-booking {
+    padding: 0 80px;
+}
+
+.booking {
+    margin: 32px 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking h2 {
+    font-weight: 700;
+    font-size: 30.6px;
+    line-height: 32px;
+    letter-spacing: 0px;
+}
+
+.booking button {
+    width: 147.22000122070312px;
+    height: 40px;
+    border-radius: 6px;
+    color: #FFFFFF;
+    border: none;
+    background-color: #3B82F6;
+    font-weight: 500;
+    font-size: 19.6px;
+    line-height: 24px;
+    letter-spacing: 0px;
+}
+
+/* === content booking === */
+
+.information-booking tr {
+    display: flex;
+    margin: 0 16px;
+    background-color: #F3F4F6;
+    border-radius: 8px;
+}
+
+.information-booking tr th {
+    list-style: none;
+    font-weight: 600;
+    font-size: 17.6px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+}
+
+
+.information-booking {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.institute {
+    width: 15%;
+}
+
+.date,
+.hour {
+    width: 25%;
+}
+
+.name,
+.email-booking {
+    width: 40%;
+}
+
+.operation {
+    width: 20%;
+    text-align: center;
+}
+
+
+@media screen and (max-width:834px) {
+    .container-booking {
+        width: 834px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .container-booking {
+        width: 375px;
+        padding: 0;
+    }
+
+    .booking h2 {
+        width: 207.3300018310547px;
+    }
+
+    .booking button {
+        height: 64px;
+        padding: 10px 32.5px;
+    }
+}
+
+
+/* === form Đặt lịch === */
+
+section.content-booking {
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section.content-booking h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+section.content-booking div {
+    margin-bottom: 15px;
+}
+
+
+section.content-booking label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555555;
+}
+
+section.content-booking select,
+section.content-booking input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    margin-top: 5px;
+    color: #333333;
+}
+
+section.content-booking select:focus,
+section.content-booking input[type="date"]:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background-color: #ffffff;
+}
+
+section.content-booking button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+section.content-booking button:nth-child(1) {
+    background-color: #f3f4f6;
+    color: #555555;
+    margin-left: 311px;
+    margin-right: 10px;
+}
+
+section.content-booking button:nth-child(2) {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+section.content-booking button:last-of-type:hover {
+    background-color: #2563eb;
+}
+
+
+.hidden {
+    display: none;
+}
+
+/* === PHẦN NỘI DUNG TRONG BẢNG */
+
+#schedule-table tr {
+    background-color: white;
+    list-style: none;
+    font-size: 17.6px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+}
+
+#schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#schedule-table tr td {
+    padding-left: 12px;
+}
+
+#schedule-table tr td:nth-child(1) {
+    width: 15%;
+}
+
+#schedule-table tr td:nth-child(2),
+td:nth-child(3) {
+    width: 25%;
+}
+
+#schedule-table tr td:nth-child(4),
+td:nth-child(5) {
+    width: 40%;
+}
+
+#schedule-table tr td:nth-child(6) {
+    width: 20%;
+    display: flex;
+    gap: 15px;
+}
+
+#schedule-table tr td button:nth-child(1) {
+    border: none;
+    background-color: white;
+    font-size: 17.6px;
+    color: #4667e2;
+}
+
+#schedule-table tr td button:nth-child(2) {
+    border: none;
+    background-color: white;
+    font-size: 17.6px;
+    color: #c23c31;
+}
+
+#page {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#page button {
+    background-color: #5b84ee;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* === Quản lí lịch === */
+.container-dashboard {
+    display: flex;
+}
+
+.nav-sidebar {
+    padding: 15.5px 16px;
+    background-color: #1F2937;
+    color: #FFFFFF;
+}
+
+.nav-sidebar h5 {
+    font-weight: 700;
+    font-size: 20.5px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    padding-bottom: 32.5px;
+}
+
+.nav-sidebar p {
+    display: flex;
+    width: 218px;
+    height: 40px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    align-items: center;
+}
+
+.nav-sidebar p:hover {
+    background-color: #4B5563;
+}
+
+.table-booking {
+    padding: 24px 75px 56px 24px;
+    background-color: #F3F4F6;
+    width: 100%;
+}
+
+.table-booking h4 {
+    font-weight: 700;
+    font-size: 29.1px;
+    line-height: 32px;
+    letter-spacing: 0px;
+    padding-bottom: 16.5px;
+}
+
+.statistical {
+    gap: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.statistical div {
+    width: 33, 33%;
+    padding: 24px;
+    font-weight: 600;
+    font-size: 20.7px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.statistical div p {
+    padding-right: 125px;
+}
+
+.chart {
+    margin: 24px 0 32px;
+    background-color: #FFFFFF;
+    height: 835px;
+    border-radius: 8px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.search-booking {
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    padding: 24px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.search-booking h5 {
+    font-weight: 600;
+    font-size: 20.7px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    padding-bottom: 16px;
+}
+
+.content-check {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.content-check div {
+    flex: 1px;
+}
+
+.content-check label {
+    font-weight: 500;
+    font-size: 15.2px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    color: #374151;
+}
+
+#check-class,
+.content-check input {
+    width: 100%;
+    height: 38px;
+    padding: 0 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+#check-class {
+    background-color: #D1D5DB;
+}
+
+.information-search tr {
+    display: flex;
+    margin: 0 16px;
+    background-color: #F3F4F6;
+    border-radius: 8px;
+}
+
+.information-search tr th {
+    list-style: none;
+    font-weight: 600;
+    font-size: 17.6px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+}
+
+
+.information-search {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.institute1 {
+    width: 15%;
+}
+
+.date1,
+.hour1 {
+    width: 25%;
+}
+
+.name1,
+.email-booking1 {
+    width: 40%;
+}
+
+.operation1 {
+    width: 20%;
+    text-align: center;
+}
+
+
+
+
+/*  === QUẢN LÍ DỊCH VỤ === */
+
+.information-service tr {
+    display: flex;
+    margin: 0 16px;
+    background-color: #F3F4F6;
+    border-radius: 8px;
+    justify-content: space-around;
+}
+
+.information-service tr th {
+    list-style: none;
+    font-weight: 600;
+    font-size: 17.6px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+}
+
+
+.information-service {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.name-service {
+    width: 20%;
+}
+
+.comment {
+    width: 40%;
+}
+
+.picture {
+    width: 20%;
+}
+
+.operation2 {
+    width: 20%;
+    text-align: center;
+}
+
+
+.content-service div h5 {
+    font-weight: 600;
+    font-size: 20.7px;
+    line-height: 28px;
+    letter-spacing: 0px;
+}
+
+
+
+.content-service {
+    padding: 24px 75px 56px 24px;
+    background-color: #F3F4F6;
+    width: 100%;
+    height: 100dvh;
+}
+
+.content-service div {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    align-items: center;
+}
+
+.content-service div button {
+    background-color: #3B82F6;
+    border: none;
+    border-radius: 6px;
+    color: #FFFFFF;
+    padding: 8px 20px;
+}
+
+/*  === Fomr dịch vụ === */
+
+.form-service {
+    border-radius: 6px;
+    width: 500px;
+    padding: 30px 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.form-service h5 {
+    font-weight: 600;
+    font-size: 20.7px;
+    padding-bottom: 20px;
+}
+
+.form-service div input {
+    width: 450px;
+    height: 40px;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+#comment1 {
+    width: 450px;
+    height: 100px;
+    border-radius: 6px;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+.btn-service {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.btn-service button:nth-child(1) {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #6d727f;
+    color: #FFFFFF;
+}
+
+.btn-service button:nth-child(2) {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    background-color: #5b84ee;
+    color: #FFFFFF;
+}
+
+.hidden {
+    display: none;
+}
+

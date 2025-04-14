@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+    <nav class="navigation-section">
+        <div class="logo">
+            <a href="../../index1.html">GYM MANAGEMENT</a>
+        </div>
+        <div class="navigation">
+            <a href="../../index1.html">Trang chủ</a>
+            <a href="">Lịch tập</a>
+        </div>
+    </nav>
+
+    <section class="container-booking">
+        <div class="booking">
+            <h2>Quản lí lịch tập</h2>
+            <button onclick="addSchedule()">Đặt lịch mới</button>
+        </div>
+
+        <table class="information-booking">
+            <thead>
+                <tr>
+                    <th class="institute">Lớp học</th>
+                    <th class="date">Ngày tập</th>
+                    <th class="hour">Khung giờ</th>
+                    <th class="name">Họ tên</th>
+                    <th class="email-booking">Email</th>
+                    <th class="operation">Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="schedule-table">
+
+            </tbody>
+        </table>
+    </section>
+
+    <section class="content-booking hidden" id="booking-form">
+        <h3>Đặt lịch mới</h3>
+        <div>
+            <label for="box">Lớp học</label>
+            <br>
+            <select name="box" id="box">
+                <option value="select-class" checker>Chọn lớp học </option>
+                <option value="Gym">Gym</option>
+                <option value="Yoga">Yoga</option>
+                <option value="Zumba">Zumba</option>
+            </select>
+        </div>
+        <div>
+            <label for="date">Ngày tập</label>
+            <br>
+            <input type="date" id="date">
+        </div>
+        <div>
+            <label for="time">Khung giờ</label>
+            <br>
+            <select name="time" id="time">
+                <option value="section-time" checker>Chọn khung giờ</option>
+                <option value="05:00 - 07:00">05:00 - 07:00</option>
+                <option value="07:00 - 09:00">07:00 - 09:00</option>
+                <option value="09:00 - 11:00">09:00 - 11:00</option>
+                <option value="11:00 - 13:00">11:00 - 13:00</option>
+                <option value="13:00 - 15:00">13:00 - 15:00</option>
+                <option value="15:00 - 17:00">15:00 - 17:00</option>
+                <option value="17:00 - 19:00">17:00 - 19:00</option>
+                <option value="19:00 - 21:00">19:00 - 21:00</option>
+            </select>
+        </div>
+        <div style="display: none;">
+            <label for="name">Họ tên</label>
+            <br>
+            <input type="text" id="name" disabled>
+        </div>
+        <div style="display: none;">
+            <label for="email">Email</label>
+            <br>
+            <input type="email" id="email" disabled>
+        </div>
+        <div>
+            <button onclick="hideForm()">Huỷ</button>
+            <button id="action-button" data-action="create">Lưu</button>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../assets/js/booking.js"></script>
+</body>
+
+</html>
