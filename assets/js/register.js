@@ -1,3 +1,27 @@
+function initializeAdminAccount() {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Kiểm tra nếu đã có tài khoản admin
+    const adminExists = users.some(user => user.role === "admin");
+    if (!adminExists) {
+        // Tạo tài khoản admin mặc định
+        const adminUser = {
+            id: "admin-1", // ID duy nhất
+            name: "Admin",
+            email: "admin@gmail.com",
+            password: "admin123", // Mật khẩu mặc định
+            role: "admin"
+        };
+
+        // Thêm admin vào danh sách người dùng
+        users.push(adminUser);
+        localStorage.setItem("users", JSON.stringify(users));
+        console.log("Tài khoản admin mặc định đã được tạo!");
+    }
+}
+
+// Gọi hàm này khi trang web tải
+initializeAdminAccount();
 
 // Xử lý đăng ký
 document.querySelector(".background-login").addEventListener("submit", function (event) {
@@ -55,7 +79,8 @@ document.querySelector(".background-login").addEventListener("submit", function 
             id: Math.random(),
             name: fullName,
             email: email,
-            password: password
+            password: password,
+            role: "user"
         };
 
         // Lấy mảng người dùng từ localStorage

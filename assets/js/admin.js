@@ -1,12 +1,19 @@
-// // Phân quyền Admin
-// document.addEventListener("DOMContentLoaded", function () {
-//     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+// Phân quyền Admin
+document.addEventListener("DOMContentLoaded", function () {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-//     if (!currentUser || currentUser.role !== "admin") {
-//         alert("Bạn không có quyền truy cập trang này!");
-//         window.location.href = "../../index1.html";
-//     }
-// });
+    if (!currentUser || currentUser.role !== "admin") {
+        Swal.fire({
+            icon: "warning",
+            title: "Lỗi",
+            text: "Cần tài khoản admin để truy cập!",
+            willClose: () => {
+                // Chuyển hướng khi hộp thoại đóng
+                window.location.href = "../../index1.html";
+            }
+        });
+    }
+});
 
 function addSchedule() {
     const bookingForm = document.getElementById("booking-form");

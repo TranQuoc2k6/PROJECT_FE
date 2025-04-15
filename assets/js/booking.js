@@ -1,11 +1,9 @@
 function addSchedule() {
-    const bookingForm = document.getElementById("booking-form");
-    bookingForm.classList.remove("hidden"); // Hiển thị form
+    document.getElementById("booking-form").classList.remove("hidden"); // Hiển thị form
 }
 
 function hideForm() {
-    const bookingForm = document.getElementById("booking-form");
-    bookingForm.classList.add("hidden"); // Ẩn form
+    document.getElementById("booking-form").classList.add("hidden"); // Ẩn form
 }
 
 // Lấy bảng lịch
@@ -13,25 +11,34 @@ const table = document.querySelector(".information-booking");
 
 // Hàm hiển thị dữ liệu từ localStorage
 function displaySchedules() {
-    const tableBody = document.getElementById("schedule-table");
-    const schedules = JSON.parse(localStorage.getItem("schedules")) || [];
+    const currentUser = JSON.parse(localStorage.getItem("currentUser")); // Người dùng hiện tại
+    if (!currentUser || !currentUser.email) {
+        console.error("Không tìm thấy thông tin người dùng.");
+        return;
+    }
 
-    tableBody.innerHTML = ""; // Xóa các dòng cũ trong <tbody>
+    const schedules = JSON.parse(localStorage.getItem("schedules")) || [];
+    const scheduleTable = document.getElementById("schedule-table");
+
+    scheduleTable.innerHTML = ""; // Xóa danh sách cũ trong bảng
 
     schedules.forEach((schedule, index) => {
-        const newRow = document.createElement("tr");
-        newRow.innerHTML = `
-            <td>${schedule.class}</td>
-            <td>${schedule.date}</td>
-            <td>${schedule.time}</td>
-            <td>${schedule.name}</td>
-            <td>${schedule.email}</td>
-            <td>
-                <button onclick="editSchedule(${index})">Sửa</button>
-                <button onclick="deleteSchedule(${index})">Xóa</button>
-            </td>
-        `;
-        tableBody.appendChild(newRow);
+        // Kiểm tra email hoặc id của người dùng
+        if (schedule.email === currentUser.email) {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${schedule.class}</td>
+                <td>${schedule.date}</td>
+                <td>${schedule.time}</td>
+                <td>${schedule.name}</td>
+                <td>${schedule.email}</td>
+                <td>
+                    <button onclick="editSchedule(${index})">Sửa</button>
+                    <button onclick="deleteSchedule(${index})">Xóa</button>
+                </td>
+            `;
+            scheduleTable.appendChild(row);
+        }
     });
 }
 
@@ -115,7 +122,7 @@ function saveSchedule() {
         });
         return;
     }
-    
+
     // Kiểm tra trùng lặp lịch
     const checkSchedules = JSON.parse(localStorage.getItem("schedules")) || [];
     const isDuplicate = checkSchedules.some(schedule =>
@@ -175,9 +182,3 @@ function saveEditedSchedule(index) {
         icon: "success"
     });
 }
-
-
-
-
-
-
