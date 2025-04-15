@@ -15,7 +15,6 @@ function initializeAdminAccount() {
 
         users.push(adminUser);
         localStorage.setItem("users", JSON.stringify(users));
-        console.log("Tài khoản admin mặc định đã được tạo!");
     }
 }
 
