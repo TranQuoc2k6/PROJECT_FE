@@ -50,15 +50,20 @@ document.querySelector(".background-login").addEventListener("submit", function 
     }
 
     // Kiểm tra thông tin nhập liệu
-    if (fullName === "") {
-        showError("user-name", "Họ và tên không được để trống!");
-    } 
+
+    if(fullName === "")  {
+        showError("user-name", "Họ và tên không được dể trống!")
+    }
+
+    if (!fullName.startsWith("Trần")) {
+        showError("user-name", "Phải có họ Trần ở trước!");
+    }
 
     if (email === "") {
         showError("email", "Email không được để trống!");
     } else if (!email.includes("@") || !email.includes(".")) {
         showError("email", "Email không hợp lệ!");
-    }   
+    }
 
     if (password === "") {
         showError("password", "Mật khẩu không được để trống!");

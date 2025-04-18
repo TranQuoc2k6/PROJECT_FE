@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "Lỗi",
             text: "Cần tài khoản admin để truy cập!",
             willClose: () => {
-                // Chuyển hướng khi hộp thoại đóng
                 window.location.href = "../../index1.html";
             }
         });
@@ -52,6 +51,7 @@ function displaySchedules() {
     });
 }
 
+
 // Hàm lưu dữ liệu khi nhấn nút "Lưu"
 function addSchedule() {
     const bookingForm = document.getElementById("booking-form");
@@ -62,6 +62,8 @@ function addSchedule() {
     actionButton.setAttribute("data-action", "create");
     actionButton.onclick = saveSchedule; // Gắn hàm tạo mới lịch
 }
+
+
 
 // Hàm chỉnh sửa lịch 
 function editSchedule(index) {
